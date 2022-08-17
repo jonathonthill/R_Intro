@@ -1,0 +1,38 @@
+- Class: meta
+  Course: Intro R for Biologists
+  Lesson: Getting Started
+  Author: Jonathon Hill
+  Type: Standard
+  Organization: BYU
+  Version: 1.0.0
+
+- Class: text
+  Output: We are almost finished talking about R basics. However, I want to 
+    quickly talk about packages in R.
+    
+- Class: text
+  Output: Packages are groups of functions that can be distributed and loaded by 
+    other users. You have already used at least one package, because you are using 
+    swirl. When you loaded swirl, you were loading all of the code necessary for 
+    these lessons. Using packages can be a huge time saver. Imagine if you had to 
+    code everything from scratch every time!
+    
+- Class: text
+  Output: There are two steps to using a package. The first is to download and 
+    install the code. The second is to load the code for use.
+    
+- Class: cmd_question
+  Output: >
+    Installing packages in R is very simple, but the process will depend on 
+    where the package comes from. There are two major repositories of R packages 
+    for biologists. The first is the main R repository CRAN. To install a CRAN 
+    package. You simply have to type install.packages() and provide a vector of 
+    one or more packages as an argument to the function. Let's try it out. To continue our lesson, 
+    we need two packages: 'devtools' and 'BiocManager'. Both are installed from 
+    the CRAN database. Go ahead and install them now. Note: Capitilization matters 
+    with package names.
+  CorrectAnswer: install.packages(c("devtools", "BiocManager"))
+  AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
+  Hint: Type c(1, 2, 3, 4) + c(0, 10, 100) to see how R handles adding two vectors,
+    when the shorter vector's length does not divide evenly into the longer vector's
+    length. Don't worry about assigning the result to a variable.
