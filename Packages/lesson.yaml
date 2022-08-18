@@ -7,32 +7,143 @@
   Version: 1.0.0
 
 - Class: text
-  Output: We are almost finished talking about R basics. However, I want to 
-    quickly talk about packages in R.
+  Output: >
+    As you can imagine, the number of functions and lines of code in an R 
+    analysis script can get very long. However, this can be 
+    managed by making and using packages.
     
 - Class: text
-  Output: Packages are groups of functions that can be distributed and loaded by 
+  Output: >
+    Packages are groups of functions that can be distributed and loaded by 
     other users. You have already used at least one package, because you are using 
     swirl. When you loaded swirl, you were loading all of the code necessary for 
     these lessons. Using packages can be a huge time saver. Imagine if you had to 
     code everything from scratch every time!
     
 - Class: text
-  Output: There are two steps to using a package. The first is to download and 
+  Output: >
+    There are two steps to using a package. The first is to download and 
     install the code. The second is to load the code for use.
     
-- Class: cmd_question
+- Class: text
   Output: >
     Installing packages in R is very simple, but the process will depend on 
     where the package comes from. There are two major repositories of R packages 
-    for biologists. The first is the main R repository CRAN. To install a CRAN 
+    for biologists: CRAN (the main R repository) and BioConductor (A repositor of 
+    biology-related packages). You should also be aware that the devtools 
+    package can also be used to install packages from local files or online 
+    sites, such as Github. However, we will not cover its use here.
+    
+- Class: cmd_question
+  Output: >
+    Only the package for CRAN is installed by default, so we 
+    will use it to install the package to install from BioConductor. To install a CRAN 
     package. You simply have to type install.packages() and provide a vector of 
-    one or more packages as an argument to the function. Let's try it out. To continue our lesson, 
-    we need two packages: 'devtools' and 'BiocManager'. Both are installed from 
-    the CRAN database. Go ahead and install them now. Note: Capitilization matters 
-    with package names.
-  CorrectAnswer: install.packages(c("devtools", "BiocManager"))
-  AnswerTests: omnitest(correctExpr='c(1, 2, 3, 4) + c(0, 10, 100)')
-  Hint: Type c(1, 2, 3, 4) + c(0, 10, 100) to see how R handles adding two vectors,
-    when the shorter vector's length does not divide evenly into the longer vector's
-    length. Don't worry about assigning the result to a variable.
+    one or more packages as an argument to the function. Let's try it out. To 
+    continue our lesson, we need the package for the other repository, which is 
+    call 'BiocManager'. Go ahead and install it from the CRAN repository.
+  CorrectAnswer: install.packages("BiocManager")
+  AnswerTests: omnitest(correctExpr='install.packages("BiocManager")'';
+                 check_packages_installed()
+  Hint: Typing install.packages("BiocManager") will install the 
+    packages.
+  
+- Class: cmd_question
+  Output: >
+    Even though the packages are now installed, their code is not available 
+    to use. For example, try to use the BiocManager function install().
+  CorrectAnswer: install()
+  AnswerTests: omnitest(correctExpr='install()')
+  Hint: Simply type install(). No arguments are necessary
+  
+- Class: cmd_question
+  Output: > 
+    Notice that it gave an error saying that R could not find the function 
+    "install". That is because it does not know to look in the BiocManager package. 
+    There are two ways to tell it. The first is to directly include the package name 
+    in the call using the format packageName::function(). This method is most 
+    commonly done when you are only using a function once. Go ahead and try it. 
+    Call the install() function from the BiocManager package explicitly.
+      
+    Note: When you do, it may ask you to update one or more packages. Go ahead 
+    and answer 'all' and 'yes' to the prompts.    
+  CorrectAnswer: BiocManager::install()
+  AnswerTests: omnitest(correctExpr='BiocManager::install()')
+  Hint: Check your spelling and capitalization. 
+  
+- Class: cmd_question
+  Output: >
+    Running this function with no arguments installs the base set of Bioconductor 
+    packages. However, you can also use a character string to name a package you 
+    want installed. Try it now. Install the package "DESeq2" using the 
+    BiocManager install command. 
+  CorrectAnswer: BiocManager::install("DESeq2")
+  AnswerTests: omnitest(correctExpr='BiocManager::install("DESeq2")')
+  Hint: Check your spelling and capitalization. 
+  
+- Class: text
+  Output: > 
+    If a package is going to be used repeatedly in the code, then naming it every 
+    time can get tedious and will make your code hard to read. In this case, it 
+    is better to load the package into the code Namespace. This will make all of 
+    the function names directly available without having to prepend the package 
+    name.
+    
+- Class: cmd_question
+  Output: > 
+    Let's see how this works. If you remember, typing install() gave an error. 
+    However, if we load BiocManager into the namespace, then it will now
+    work. To load a package, we use the libary() function with the name of the 
+    package as its argument.
+    
+    Note: One of the weirdest eccentricities of R is that the package name can be in 
+    quotes or not in quotes when loading with library().
+    
+    Load the BiocManager package now:
+  CorrectAnswer: library(BiocManager)
+  AnswerTests: omnitest(correctExpr='library(BiocManager)')
+  Hint: Check your spelling and capitalization. 
+
+- Class: cmd_question
+  Output: >
+    Now, you can use the install() command without saying what package it comes 
+    from. Install the package 'sangerseqR' from Bioconductor using the 
+    install() function.
+  CorrectAnswer: install('sangerseqR')
+  AnswerTests: omnitest(correctExpr='install("sangerseqR")')
+  Hint: Check your spelling and capitalization.
+  
+- Class: cmd_question
+  Output: > 
+    Once a package is loaded, it can usually be left active in the code. However, 
+    there are some occasions where you may want to unload a library. This can be 
+    done using the detach() function. Because detach can be used to remove 
+    many things, we need to tell it that we are removing a package. We also 
+    need to specifically tell it to remove its functions from the namespace with 
+    the 'unload' argument. Thus, we a call to unload BiocManager as follows:
+    
+    detach(package:BiocManager, unload=TRUE)
+    
+    Try it now:
+  CorrectAnswer: detach(package:BiocManager, unload=TRUE)
+  AnswerTests: omnitest(correctExpr='detach(package:BiocManager, unload=TRUE)')
+  Hint: Check your spelling and capitalization.    
+
+- Class: cmd_question
+  Output: >
+    You can also completely uninstall a package. For example, the sangerseqR 
+    package you installed is used for Sanger Sequencing, which we will not 
+    cover in this class. Let's go ahead and remove it now. 
+    
+    The command to remove a package is aptly named 'remove.packages()' and can 
+    be used regardless of how the package was installed. Use it to remove the 
+    sangerseqR package from your system.
+  CorrectAnswer: remove.packages(sangerseqR)
+  AnswerTests: omnitest(correctExpr='remove.packages(sangerseqR)')
+  Hint: Check your spelling and capitalization.  
+  
+- Class: text
+  Output: >
+    Ok, that finishes our introduction to the basic elements of R. Next, we will 
+    dive into data structures and how to work with them.
+  
