@@ -20,7 +20,7 @@
 - Class: cmd_question
   Output: "Let's try using a few basic functions just for fun. The Sys.Date()
     function returns a string representing today's date. Type Sys.Date() below 
-      and see what happens."
+    and see what happens."
   CorrectAnswer: Sys.Date()
   AnswerTests: omnitest(correctExpr='Sys.Date()')
   Hint: "Display today's date by typing: Sys.Date()"
@@ -183,8 +183,8 @@
   Output: "You may not realize it but I just tricked you into doing something
     pretty interesting! args() is a function, remainder() is a function, yet
     remainder was an argument for args(). Yes it's true: you can pass functions
-    as arguments! 
-
+    as arguments!"
+    
 - Class: cmd_question
   Output: "For the rest of the course we're going to use the paste() function
     frequently. Type ?paste so we can take a look at the documentation for the 
