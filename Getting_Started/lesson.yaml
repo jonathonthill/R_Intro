@@ -10,11 +10,11 @@
   Output: >
     Welcome to R! If you are reading this, you clearly have R installed and 
     are ready to learn how to use it. This course will be divided into 5 sections:
-    
-    1. R Programming Basics (4 parts)
-    2. Working with Data (3 parts)
-    3. Graphics and Plots (3 parts)
-    
+    \n\n
+    1. R Programming Basics (4 parts)\n\n
+    2. Working with Data (3 parts)\n\n
+    3. Graphics and Plots (3 parts)\n\n
+    \n\n
     This course is designed to give you just enough information to get started in R,
     but there is far more you can do. Hopefully, we will give you enough to then 
     search the web and continue to learn and grow your R coding skills long into the 
