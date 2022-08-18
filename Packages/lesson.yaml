@@ -41,9 +41,9 @@
     package. You simply have to type install.packages() and provide a vector of 
     one or more packages as an argument to the function. Let's try it out. To 
     continue our lesson, we need the package for the other repository, which is 
-    call 'BiocManager'. Go ahead and install it from the CRAN repository.
+    called 'BiocManager'. Go ahead and install it from the CRAN repository.
   CorrectAnswer: install.packages("BiocManager")
-  AnswerTests: omnitest(correctExpr='install.packages("BiocManager")'';
+  AnswerTests: omnitest(correctExpr='install.packages("BiocManager");
                  check_packages_installed()
   Hint: Typing install.packages("BiocManager") will install the 
     packages.
@@ -146,4 +146,3 @@
   Output: >
     Ok, that finishes our introduction to the basic elements of R. Next, we will 
     dive into data structures and how to work with them.
-  
