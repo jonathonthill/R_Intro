@@ -44,7 +44,7 @@
     called 'BiocManager'. Go ahead and install it from the CRAN repository.
   CorrectAnswer: install.packages("BiocManager")
   AnswerTests: omnitest(correctExpr='install.packages("BiocManager")');
-                 check_packages_installed()
+                 check_packages_installed("BiocManager")
   Hint: Typing install.packages("BiocManager") will install the 
     packages.
   
