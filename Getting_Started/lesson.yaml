@@ -10,6 +10,7 @@
   Output: >
     Welcome to R! If you are reading this, you clearly have R installed and 
     are ready to learn how to use it. This course will be divided into 5 sections:
+    
     1. R Programming Basics (4 parts)
     2. Working with Data (3 parts)
     3. Graphics and Plots (3 parts)
@@ -21,8 +22,8 @@
 
 - Class: text
   Output: I would also like to acknowledge the great Swirl team for their course 
-  offerings. These lessons borrow and cobble together many different lessons from the 
-  R programming and Exploratory Data Analysis courses.
+    offerings. These lessons borrow and cobble together many different lessons from the 
+    R programming and Exploratory Data Analysis courses.
   
 - Class: text
   Output: Finally, If at any point you'd like more information on a particular topic related
