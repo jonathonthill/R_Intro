@@ -48,19 +48,16 @@
   Hint: Typing install.packages("BiocManager") will install the 
     packages.
   
-- Class: cmd_question
+- Class: text
   Output: >
     Even though the packages are now installed, their code is not available 
-    to use. For example, try to use the BiocManager function install().
-  CorrectAnswer: install()
-  AnswerTests: omnitest(correctExpr='install()')
-  Hint: Simply type install(). No arguments are necessary
+    to use. if we tried to use the BiocManager function install(), it would return
+    an error saying it could not find the function "install" because it does not 
+    know where to look for it.
   
 - Class: cmd_question
   Output: > 
-    Notice that it gave an error saying that R could not find the function 
-    "install". That is because it does not know to look in the BiocManager package. 
-    There are two ways to tell it. The first is to directly include the package name 
+    There are two ways to tell R where to find function names. The first is to directly include the package name 
     in the call using the format packageName::function(). This method is most 
     commonly done when you are only using a function once. Go ahead and try it. 
     Call the install() function from the BiocManager package explicitly.
