@@ -222,6 +222,10 @@
   AnswerTests: expr_uses_func('telegram')
   Hint: 'Use the telegram function with whatever arguments you want to use.'
 
+- Class: text
+  Output: Now let's try another function. When you continue a script will open. 
+    Edit the script following the comments in the file.
+  
 - Class: script
   Output: Make sure to save your script before you type submit().
   AnswerTests: test_func6()
