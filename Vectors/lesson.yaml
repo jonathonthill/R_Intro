@@ -16,9 +16,10 @@
 
 - Class: text
   Output: In previous lessons, we dealt entirely with numeric vectors, which are one
-    type of atomic vector. Other types of atomic vectors include logical, character,
-    integer, and complex. In this lesson, we'll take a closer look at logical and
-    character vectors.
+    type of atomic vector. Other types of atomic vectors include logical, 
+    integer, double, character, complex, factor, raw. In this lesson, we'll take a 
+    closer look at logical andcharacter vectors. We will tehn finish by talking 
+    about how lists can combine vectors of various types.
 
 - Class: text
   Output: Logical vectors can contain the values TRUE, FALSE, and NA (for 'not available').
@@ -256,8 +257,109 @@
   Output: We'll discuss coercion in another lesson, but all it really means that the
     numbers 1, 2, 3, and 4 in the output above are no longer numbers to R, but rather
     characters "1", "2", "3", and "4".
+    
+- Class: text
+  Output: This highlights an important principle of vectors. They can only 
+    contain one data type. If any value is a character, for example, then all 
+    values have to be a character. R will automatically set the type to one that 
+    works for all the values (called coercion). You can also create, check and 
+    convert vectors manually.
+    
+- Class: cmd_question
+  Output: >
+    Remember, there are six types in R: logical, integer (including factors), 
+    numeric (called double in other programming languages), character, complex, 
+    and raw. Each of these types has three basic functions associated 
+    with it. First, to create or convert a specific type of vector simply use 
+    a function with as followed by a dot and the name of the type: as.logical(),
+    as.integer(), as.numeric(), as.character(), etc. The argument is simply a 
+    vector with the values you want to include. Make a character vector with 
+    the numbers 1:6. Save it to the variable num_chars.
+  CorrectAnswer: num_char <- as.character(1:6)
+  AnswerTests: omnitest(correctVal='num_char <- as.character(1:6)')
+  Hint: A vector with number 1:6 can be created by simply typing 1:6. place that 
+    as an argumnet to as.character(). Don't foget to include num_char <- to save 
+    the result.
+  
+- Class: cmd_question
+  Output: >
+    Similarly, you can also test if an existing vector is a certain type. 
+    This is done with a function with the format is.type(vetctor_to_test). 
+    For example, to test if num_char is an integer vector.
+  CorrectAnswer: is.integer(num_char)
+  AnswerTests: omnitest(correctExpr='is.integer(num_char)')
+  Hint: The correct format is "is.integer(num_char)".
+
+- Class: cmd_question
+  Output: Now, test if num_char is a character vector. 
+  CorrectAnswer: is.character(num_char)
+  AnswerTests: omnitest(correctExpr='is.character(num_char)')
+  Hint: The correct format is "is.character(num_char)".
+  
+- Class: cmd_question
+  Output: >
+    Finally, it is also possible to simply ask what type a vector is. This is 
+    done with the function typeof(). Find out the type of num_char.
+  CorrectAnswer: typeof(num_char)
+  AnswerTests: omnitest(correctExpr='typeof(num_char)')
+  Hint: The correct format is "typeof(num_char)".
+
+- Class: cmd_question
+  Output: >
+    Another way to find the type is by using the structure function str(). This 
+    function is a great way to find out information about the structure of any 
+    object and works on any save variable, regardless of type or complexity. 
+    Use str() on num_char.
+  CorrectAnswer: str(num_char)
+  AnswerTests: omnitest(correctExpr='str(num_char)')
+  Hint: The correct format is "str(num_char)".
 
 - Class: text
-  Output: That is it for vectors. They are an extremely important data structure 
-    in R, so make sure you are comfortable with them. Next time, we will look at
-    functions.
+  Output: The str output has three parts the first is an abbreviation for the 
+    type (chr = character). The next tells you the dimensions of the object, and 
+    finally it will show the values. If the list is long, it will only show the 
+    first few values to conserve space. This information can be very useful when 
+    exploring the outputs of various functions. We will use it extensively.
+    
+- Class: text
+  Output: What if you have a collection of different types that you want to save 
+    to a single variable? For that, you need a list. Lists can be thought of as 
+    a collection of buckets, and each bucket can hold any object type, regardless 
+    of what is in the other buckets. 
+    
+- Class: cmd_question
+  Output: To illustrate, let's make a list with two items--the 
+    numbers 1:10 and the letters of the alphabet. We create the list using the 
+    list() function and give it the items we want stored as arguments. For 
+    example, create a list using the command list(1:10, LETTERS) and save it 
+    as basic_facts. 
+  CorrectAnswer: basic_facts <- list(1:10, LETTERS)
+  AnswerTests: omnitest(correctExpr='basic_facts <- list(1:10, LETTERS)')
+  Hint: The correct format is "basic_facts <- list(1:10, LETTERS)".
+
+- Class: cmd_question
+  Output: Now, let's look at the list by simply typing its name.
+  CorrectAnswer: basic_facts
+  AnswerTests: omnitest(correctExpr='basic_facts')
+  Hint: Simply type basic_facts
+
+- Class: cmd_question
+  Output: We can get more detailed information by using the str(), like we did 
+    with vectors.
+  CorrectAnswer: str(basic_facts)
+  AnswerTests: omnitest(correctExpr='str(basic_facts)')
+  Hint: Simply type str(basic_facts)
+  
+- Class: text
+  Output: Notice that the str shows a list of 2 and then provides the vector 
+    information for each.
+    
+## List of lists
+
+## empty lists and vectors
+
+- Class: text
+  Output: That is it for vectors and lists. They are extremely important data structures 
+    in R and are the building blocks for most other data structures, so make 
+    sure you are comfortable with them. Next time, we will look at
+    how to add, remove, and subset values from these structures.
