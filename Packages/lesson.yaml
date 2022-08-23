@@ -69,12 +69,12 @@
   
 - Class: cmd_question
   Output: >
-    Running this function with no arguments installs the base set of Bioconductor 
+    Running this function with no package names installs the base set of Bioconductor 
     packages. However, you can also use a character string to name a package you 
-    want installed. Try it now. Install the package "DESeq2" using the 
-    BiocManager install command. 
-  CorrectAnswer: BiocManager::install("DESeq2")
-  AnswerTests: omnitest(correctExpr='BiocManager::install("DESeq2")')
+    want installed. Try it now. Use the up arrow to get your command back and 
+    add "DESeq2" as the first argument.
+  CorrectAnswer: BiocManager::install("DESeq2", update = FALSE, ask = FALSE)
+  AnswerTests: omnitest(correctExpr='BiocManager::install("DESeq2", update = FALSE, ask = FALSE)')
   Hint: Check your spelling and capitalization. 
   
 - Class: text
