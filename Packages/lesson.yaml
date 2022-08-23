@@ -65,7 +65,7 @@
     Note: When you do, it may ask you to update one or more packages. Go ahead 
     and answer 'all' and 'yes' to the prompts.    
   CorrectAnswer: BiocManager::install()
-  AnswerTests: omnitest(correctExpr='BiocManager::install()')
+  AnswerTests: expr_uses_func('BiocManager::install')
   Hint: Check your spelling and capitalization. 
   
 - Class: cmd_question
