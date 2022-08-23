@@ -104,9 +104,9 @@
   Output: >
     Now, you can use the install() command without saying what package it comes 
     from. Install the package 'sangerseqR' from Bioconductor using the 
-    install() function.
-  CorrectAnswer: install('sangerseqR')
-  AnswerTests: omnitest(correctExpr='install("sangerseqR")')
+    install() function. Remember to include the update = FALSE and ask = FALSE arguments.
+  CorrectAnswer: install('sangerseqR', update = FALSE, ask = FALSE)
+  AnswerTests: omnitest(correctExpr='install("sangerseqR", update = FALSE, ask = FALSE)')
   Hint: Check your spelling and capitalization.
   
 - Class: cmd_question
