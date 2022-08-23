@@ -60,12 +60,11 @@
     There are two ways to tell R where to find function names. The first is to directly include the package name 
     in the call using the format packageName::function(). This method is most 
     commonly done when you are only using a function once. Go ahead and try it. 
-    Call the install() function from the BiocManager package explicitly.
-      
-    Note: When you do, it may ask you to update one or more packages. Go ahead 
-    and answer 'all' and 'yes' to the prompts.    
-  CorrectAnswer: BiocManager::install()
-  AnswerTests: expr_uses_func('BiocManager::install')
+    Call install(update = FALSE, ask = FALSE) from the BiocManager package explicitly. 
+    Note: the arguments tell it to not ask to update packages already installed. 
+    It is usually a good idea to update everything, but it makes swirl crash.   
+  CorrectAnswer: BiocManager::install(update = FALSE, ask = FALSE)
+  AnswerTests: omnitest(correctExpr='BiocManager::install(update = FALSE, ask = FALSE)')
   Hint: Check your spelling and capitalization. 
   
 - Class: cmd_question
