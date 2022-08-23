@@ -1,1 +1,4 @@
-detach("package:BiocManager", unload = TRUE)
+if ("BiocManager" %in% (.packages())) {
+  detach("package:BiocManager", unload = TRUE)
+}
+
