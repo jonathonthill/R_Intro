@@ -276,7 +276,7 @@
     vector with the values you want to include. Make a character vector with 
     the numbers 1:6. Save it to the variable num_chars.
   CorrectAnswer: num_char <- as.character(1:6)
-  AnswerTests: omnitest(correctVal='num_char <- as.character(1:6)')
+  AnswerTests: omnitest(correctExpr='num_char <- as.character(1:6)')
   Hint: A vector with number 1:6 can be created by simply typing 1:6. place that 
     as an argumnet to as.character(). Don't foget to include num_char <- to save 
     the result.
