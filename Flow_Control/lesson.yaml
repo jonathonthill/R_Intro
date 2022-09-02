@@ -348,4 +348,3 @@
 
 - Class: text
   Output: In this lesson, you learned how to use the powerful lapply() and sapply() functions to apply an operation over the elements of a list. Now, it is time to start looking at plotting in R.
-  
