@@ -10,7 +10,8 @@
                       'R_intro', 'Looking_at_Data',
                       'plant-data.txt')
 # Read in data
-plants <- read.csv(.datapath, strip.white=TRUE, na.strings="")
+plants <- read.csv(.datapath, strip.white=TRUE, na.strings="", 
+                   stringsAsFactors = TRUE)
 
 # Remove annoying columns
 .cols2rm <- c('Accepted.Symbol', 'Synonym.Symbol')

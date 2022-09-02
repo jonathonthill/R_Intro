@@ -10,7 +10,7 @@
   Output: Whenever you're working with a new dataset, the first thing you should do is look at it! What is the format of the data? What are the dimensions? What are the variable names? How are the variables stored? Are there missing data? Are there any flaws in the data?
 
 - Class: text
-  Output: This lesson will teach you how to answer these questions and more using R's built-in functions. We'll be using a dataset constructed from the United States Department of Agriculture's PLANTS Database (http://plants.usda.gov/adv_search.html).
+  Output: This lesson will teach you how to answer these questions and more using R's built-in functions. We'll be using a dataset constructed from the United States Department of Agriculture's PLANTS Database.
 
 - Class: cmd_question
   Output: I've stored the data for you in a variable called plants. Type ls() to list the variables in your workspace, among which should be plants.
