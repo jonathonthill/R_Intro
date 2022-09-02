@@ -1,5 +1,6 @@
 library(jpeg)
 library(datasets)
+library(ggplot2)
 
 # For compatibility with 2.2.21
 .get_course_path <- function(){
@@ -13,6 +14,6 @@ data(mpg)
 state <- data.frame(state.x77, region = state.region)
 # Put initialization code in this file.
 path_to_course <- file.path(.get_course_path(),
-	"Exploratory_Data_Analysis","Base_Plotting_System")
+	"R_intro","Base_Plotting_System")
 try(dev.off(), silent=TRUE)
 plot.new()

@@ -29,7 +29,7 @@
   Output: >
     Installing packages in R is very simple, but the process will depend on 
     where the package comes from. There are two major repositories of R packages 
-    for biologists: CRAN (the main R repository) and BioConductor (A repositor of 
+    for biologists: CRAN (the main R repository) and BioConductor (a repository of 
     biology-related packages). You should also be aware that the devtools 
     package can also be used to install packages from local files or online 
     sites, such as Github. However, we will not cover its use here.
@@ -51,7 +51,7 @@
 - Class: text
   Output: >
     Even though the packages are now installed, their code is not available 
-    to use. if we tried to use the BiocManager function install(), it would return
+    to use. If we tried to use the BiocManager function install(), it would return
     an error saying it could not find the function "install" because it does not 
     know where to look for it.
   
@@ -116,7 +116,7 @@
     done using the detach() function. Because detach can be used to remove 
     many things, we need to tell it that we are removing a package. We also 
     need to specifically tell it to remove its functions from the namespace with 
-    the 'unload' argument. Thus, we a call to unload BiocManager as follows:
+    the 'unload' argument. Thus, we format a call to unload BiocManager as follows:
     
     detach(package:BiocManager, unload=TRUE)
     
@@ -134,8 +134,8 @@
     The command to remove a package is aptly named 'remove.packages()' and can 
     be used regardless of how the package was installed. Use it to remove the 
     sangerseqR package from your system.
-  CorrectAnswer: remove.packages(sangerseqR)
-  AnswerTests: omnitest(correctExpr='remove.packages(sangerseqR)')
+  CorrectAnswer: remove.packages("sangerseqR")
+  AnswerTests: omnitest(correctExpr='remove.packages("sangerseqR")')
   Hint: Check your spelling and capitalization.  
   
 - Class: text

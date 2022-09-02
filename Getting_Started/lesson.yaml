@@ -9,13 +9,8 @@
 - Class: text
   Output: >
     Welcome to R! If you are reading this, you clearly have R installed and 
-    are ready to learn how to use it. This course will be divided into 5 sections:
-
-    1. R Programming Basics (4 parts)
-    2. Working with Data (3 parts)
-    3. Graphics and Plots (3 parts)
-
-    This course is designed to give you just enough information to get started in R,
+    are ready to learn how to use it. This course is designed to give you just 
+    enough information to get started in R,
     but there is far more you can do. Hopefully, we will give you enough to then 
     search the web and continue to learn and grow your R coding skills long into the 
     future.
@@ -26,7 +21,7 @@
     R programming and Exploratory Data Analysis courses.
   
 - Class: text
-  Output: Finally, If at any point you'd like more information on a particular topic related
+  Output: Finally, if at any point you'd like more information on a particular topic related
     to R, you can type help.start() at the prompt, which will open a menu of resources
     (either within RStudio or your default web browser, depending on your setup).
     Alternatively, a simple web search often yields the answer you're looking for.

@@ -132,7 +132,7 @@
   Hint: The function par specifies graphical parameters so the answer should deal with plots. That leaves two choices. The 'in' in 'pin' specifies inches.
 
 - Class: cmd_question
-  Output: Now, run the command par("fg") or or par('fg') or par()$fg and see what you get.
+  Output: Now, run the command par("fg"), par('fg') or par()$fg and see what you get.
   CorrectAnswer: par()$fg
   AnswerTests: ANY_of_exprs('par(\"fg\")','par()$fg','par(\'fg\')')
   Hint: Type par()$fg OR par('fg') OR par("fg") at the command prompt.

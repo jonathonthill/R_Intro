@@ -229,4 +229,4 @@
   Hint: Typeg + geom_point() + facet_grid(drv~cyl,margins=TRUE)+geom_smooth(method="lm",size=2,se=FALSE,color="black")+labs(x="Displacement",y="Highway Mileage",title="Swirl Rules!") at the command prompt.
 
 - Class: text
-  Output: You could have done these labels with separate calls to labs but we thought you'd be sick of this by now. Anyway, congrats! You've concluded part 2 of ggplot2. We hope you got enough mileage out of the lesson. If you like ggplot2 you can do some extras with the extra lesson.
+  Output: You could have done these labels with separate calls to labs but we thought you'd be sick of this by now. Anyway, congrats! You've concluded part 2 of ggplot2. We hope you got enough mileage out of the lesson. 

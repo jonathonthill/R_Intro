@@ -75,7 +75,7 @@
 - Class: text
   Output: "Congratulations on writing your first function. By writing functions,
     you can gain serious insight into how R works. As John Chambers, the creator
-    of R once said:\n\n To understand computations in R, two slogans are helpful:
+    of R, once said:\n\n To understand computations in R, two slogans are helpful:
     1. Everything that exists is an object. 2. Everything that happens is a function call."
 
 - Class: cmd_question
@@ -201,7 +201,7 @@
     the strings combined into one string."
 
 - Class: cmd_question
-  Output: 'Just to see how paste() works, type paste("Programming", "is", "fun!")'
+  Output: 'Just to see how paste() works, type paste("Programming", "is", "fun!").'
   CorrectAnswer: paste("Programming", "is", "fun!")
   AnswerTests: omnitest(correctExpr='paste("Programming", "is", "fun!")')
   Hint: 'Just type: paste("Programming", "is", "fun!")'
